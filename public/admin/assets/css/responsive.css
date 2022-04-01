@@ -1,0 +1,62 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    #savecustomerdiv div{
+        margin-bottom: 10px;
+    }
+    #savecustomerdiv{
+        background-color: none !important;
+    }
+    .cust_info{
+        margin-bottom: 10px;
+    }
+    .cust_mb_10 div{
+        margin-bottom: 10px;
+    }
+    .product_search_form div{
+        margin-bottom: 10px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cust_info{
+        padding: 10px 0px 0px 0px !important;
+        margin: 0px !important;
+        font-size: 13px !important;
+    }
+    .cust_mb_10 div{
+        margin-bottom: 10px;
+    }
+    .product_search_form div{
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .cust_info{
+        padding: 10px 0px 0px 0px !important;
+        margin: 0px !important;
+        font-size: 13px !important;
+    }
+    .cust_mb_10 .col-md-2{
+        padding: 0px 0px 0px 0px !important;
+        margin: 0px !important;
+        font-size: 13px !important;
+    }
+    .product_search_form .col-md-2{
+        padding-right: 0px;
+        padding-left: 5px;
+    }
+    
+    .product_search label{
+        padding:10px 0px 0px 0px !important;
+        margin: 0px !important;
+        font-size: 12px !important;
+    }
+    .cust_mb_10 .col-md-2 label{
+        padding:10px 0px 0px 0px !important;
+        margin: 0px !important;
+        font-size: 11px !important;
+    }
+}

@@ -1,0 +1,1956 @@
+
+/*  ========================
+        START DEFULT CSS
+    ========================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$main-bg: #000033;
+$sec-bg: #ff6633;
+$white: #ffffff;
+$black: #000000;
+$text-color: #656565;
+$bg-color: #f2f2f2;
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        display: inline-block;
+    }
+}
+h1, h2, h3, h4, h5, h6, a,li,span{
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    color: $text-color;
+    font-size: 15px;
+    line-height: 26px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-padding{
+    padding: 50px 0 0;
+}
+.section-padding-2{
+    padding: 20px 0 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $main-bg;
+    border-radius: 30px;
+}
+
+/* SECTION TITLE CSS START */
+.section-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    h2{
+        font-size: 40px;
+        color: $main-bg;
+        margin: 0;
+    }
+}
+
+.more-btn {
+    position: relative;
+    text-align: center;
+    a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: $main-bg;
+        color: $white;
+        padding: 10px 40px;
+
+    }
+}
+/* SECTION TITLE CSS END */
+.offer_no {
+    color: #ff6633;
+    border: 1px solid #ff6633;
+    padding: 0px 10px;
+    font-size: 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+/*  ======================
+        END DEFULT CSS
+    ======================
+*/
+
+/*  ==============================
+        TOP BAR AREA CSS START
+    ==============================
+*/
+.top-bar-area {
+    position: fixed;
+    padding: 10px 0px;
+    background-color: $main-bg;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);    
+    border-top: 1px solid #3c3c40;
+    width: 100%;
+    z-index: 9;
+    form{
+        position: relative;
+        top: 15px;
+        left: 30px;
+        .form-control {
+            padding: 13px 10px 13px 50px;
+            border: 1px solid $bg-color;
+            border-radius: 30px;
+            background-color: $white;
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        .search {
+            color: $main-bg;
+            font-size: 24px;
+            position: absolute;
+            top: 15px;
+            margin-left: 10px;
+        }
+        .btn {
+            color: #adb5bd;
+            font-size: 22px;
+            position: absolute;
+            top: 6px;
+            right: 0;
+            margin-right: 15px;
+            padding: 0;
+            &:hover{
+                color: $main-bg;
+            }
+        }
+    }
+    .user{
+        display: none;
+    }
+    .admin-area{
+        position: relative;
+        top: 21px;
+        ul{
+            li{
+                display: inline-block;
+                width: unset;
+                margin-left: 20px;
+                font-size: 15px;
+                .eng {
+                    color: #fff;
+                    text-decoration: none;
+                    transition: .3s;
+                    font-size: 18px;
+                    &:hover{
+                        color: $sec-bg;
+                    }
+                }
+                span{
+                    display: inline-block;
+                    width: 1px ;
+                    height: 14px;
+                    margin: 0 5px;
+                    background-color: $sec-bg;
+                }
+            }
+            .icon{
+                a{
+                    font-size: 21px;
+                    color: $sec-bg;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    ul.dropdown-menu li {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $white;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 0;
+        font-size: 16px;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .btn-check:focus+.btn, .btn:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+    .dropdown-menu.show {
+        display: block;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top:50px !important;
+        transform: none !important;
+        z-index: 1000;
+        display: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 0;
+        transition: all .5s;
+    }
+    .en-area{
+        .dropdown-menu.show {
+            display: block;
+        }
+        .dropdown-menu {
+            left: -90px !important;
+        }
+    }
+    ul.dropdown-menu svg.svg-inline--fa.fa-caret-up.fa-w-10 {
+        position: absolute;
+        top: -20px;
+        right: 15px;
+        font-size: 30px;
+        color: $main-bg;
+    }
+    .dropdown-item:focus, .dropdown-item:hover {
+        background-color: $main-bg;
+        color: $white;
+    }
+    .dropdown-item.active, .dropdown-item:active {
+        color: $white;
+        text-decoration: none;
+        background-color: $main-bg;
+    }
+    .dropdown-item {
+        white-space: unset;
+        font-size: 14px;
+    }
+
+    li{
+        display: block;
+        width: 100%;
+    }
+    li.header {
+        background: $main-bg;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        padding: 20px 25px;
+    }
+    .icon{
+        font-size: 26px;
+        color: $text-color;
+    }
+    .number {
+        position: absolute;
+        top: -14px;
+        right: -20px;
+        height: 30px;
+        width: 30px;
+        line-height: 28px;
+        color: $white;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: $main-bg;
+        border: 2px solid $bg-color;
+        border-radius: 50%;
+        display: block;
+        text-align: center;
+        -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+    button#dropdownMenuButton1{
+        .svg-inline--fa{
+            font-size: 21px;
+            color: $sec-bg;
+            margin-right: 5px;
+            transition: all .5s;
+            &:hover{
+                color: $white;
+            }
+        }
+
+    }
+}
+
+
+
+.cart-btn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background-color: #003;
+    z-index: 9;
+    text-align: center;
+    opacity: .8;
+    transition: .5s;
+    box-shadow: 0 0 16px -1px rgba(0, 0, 0, 0.75);
+    &:hover{
+        opacity: 1;
+    }
+    a{
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    .svg-inline--fa{
+        font-size: 18px;
+        color: $sec-bg;
+    }
+    span{
+        position: relative;
+        color: #fff;
+        display: block;
+        text-decoration: none;
+    }
+    .price{
+        position: relative;
+        background-color: $white;
+        display: inline-block;
+        width: 100%;
+
+    }
+}
+.top-bar-area form {
+    position: relative;
+}
+
+#searchField {
+    position: absolute;
+    top: 100%;
+    left: 21%;
+    width: 507px;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 0 0 5px gray;
+    overflow-y: scroll;
+    height: 400px
+}
+
+.searchFieldHide {
+    display: none
+}
+
+.searchFieldDisplay {
+    display: block !important
+}
+
+#searchList li {
+    display: block;
+    padding-top: 10px;
+    padding-left: 15px;
+    background: #fff
+}
+
+#searchList li a {
+    color: #2c2c2c;
+    font-weight: 700;
+    font-size: 14px
+}
+
+#searchList li a:hover {
+    color: #1a9cb7
+}
+
+/*  =============================
+        TOP BAR AREA CSS END
+    =============================
+*/
+
+/*  =========================
+        NAVER CSS START
+    =========================
+*/
+
+.big-scren{
+    position: fixed;
+    height: 100%;
+    top: 91px;
+    width: 250px;
+    overflow: scroll;
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        width: 250px;
+        height: 100%;
+        background-color: #fff!important;
+        z-index: 1;
+        border-right: 1px solid #f2f2f2;
+        li.nav-item {
+            display: block !important;
+            transition: all .5s;
+        }
+        .navbar-brand {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-right: 0;
+            font-size: 1.25rem;
+            text-decoration: none;
+            white-space: nowrap;
+            position: absolute;
+            top: 0;
+            margin: auto;
+            text-align: center;
+            left: 0;
+            right: 0;
+            background-color: $main-bg;
+        }
+        .navbar-nav {
+            display: block;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            transition: all .5s;
+            padding-bottom: 100px;
+        }
+        .navbar-collapse {
+            display: block !important;
+            flex-basis: auto;
+            top: 15px;
+            position: absolute;
+            width: 90%;
+            transition: all .5s;
+        }
+        .navbar-nav .dropdown-menu {
+            position: relative;
+            margin: 0 !important;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0 0 0 25px;
+            transition: all .5s;
+            li{
+                display: block;
+            }
+        }
+        .icon{
+            position: relative;
+            .right-icon {
+                position: absolute;
+                top: 12px;
+                right: 0;
+                transition: all .5s;
+            }
+        }
+        li.nav-item.dropdown .show .right-icon{
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            color: $main-bg;
+        }
+        .left-icon {
+            font-size: 18px;
+            margin-right: 10px;
+            color: $main-bg;
+            width: 25px;
+        }
+        .navbar-nav .nav-link {
+            color: $black !important;
+            padding: 8px 1rem;
+        }
+        .dropdown-item {
+            color: $black;
+            font-size: 15px;
+        }
+        .dropdown-item:focus, .dropdown-item:hover {
+            color: #fff !important;
+            background-color: #0d6efd;
+        }
+        .dropdown-item:focus .svg-inline--fa, .dropdown-item:hover .svg-inline--fa{
+            color: $white;
+        }
+        a.dropdown-item .svg-inline--fa {
+            font-size: 13px;
+            margin-right: 5px;
+            color: $main-bg;
+        }
+    }
+}
+.responsive-scren{
+    display: none;
+}
+
+/*  =========================
+        NAVER CSS START
+    =========================
+*/
+
+/*  =============================
+        CONTENT BOX CSS START
+    =============================
+*/
+
+.content-box{
+    position: relative;
+    margin-left: 250px;
+    top: 91px;
+}
+
+/*  ===========================
+        CONTENT BOX CSS END
+    ===========================
+*/
+
+/*  ===========================
+        HERO AREA CSS START
+    ===========================
+*/
+
+.hero-area{
+    .bg-1{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        width: 100%;
+    }
+    .slick-custom-arrow.slick-custom-arrow-left.slick-arrow {
+        position: absolute;
+        left: 10px;
+        top: 40%;
+        background-color: rgba(255, 102, 51, 0.32);
+        color: #fff;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .slick-custom-arrow.slick-custom-arrow-right.slick-arrow {
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        background-color: rgba(255, 102, 51, 0.32);
+        color: #fff;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    ul.slick-dots {
+        position: absolute;
+        text-align: center;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        button {
+            box-sizing: content-box;
+            flex: 0 1 auto;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            padding: 0;
+            margin-right: 1px;
+            margin-left: 1px;
+            text-indent: -999px;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 0;
+            opacity: .5;
+            transition: opacity .6s ease;
+            &:hover{
+                background-color: $sec-bg;
+                opacity: 1;
+            }
+        }
+        li.slick-active button{
+            background-color: $sec-bg;
+            opacity: 1;
+        }
+    }
+}
+
+/*  ===========================
+        HERO AREA CSS START
+    ===========================
+*/
+
+/*  ===============================
+        CATEGORY AREA CSS START
+    ===============================
+*/
+
+.category-area{
+    .single-category{
+        position: relative;
+        margin-bottom: 30px;
+        cursor: pointer;
+        img{
+            width: 100%;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: $main-bg;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all .5s;
+        }
+        &:hover::before{
+            opacity: .3;
+        }
+    }
+}
+
+/*  =============================
+        CATEGORY AREA CSS END
+    =============================
+*/
+
+/*  ===============================
+        PRODUCT AREA CSS START
+    ===============================
+*/
+
+.product-area{
+    .tab-content ul .product{
+        width: 24%;
+        margin-left: -2px;
+        margin-right: -2px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        transition: all .5s;
+        &:hover{
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.30);
+        }
+        .single-product{
+            position: relative;
+            .image-area{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+                .overly{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    overflow: hidden;
+                    .add-cart{
+                        position: absolute;
+                        bottom: -59px;
+                        margin-bottom: 10px;
+                        opacity: 0;
+                        width: 100%;
+                        text-align: center;
+                        transition: all .5s;
+                        .qty-input {
+                            color: $black;
+                            background: $white;
+                            margin: 0 48px;
+                            overflow: hidden;
+    
+                            .product-qty,
+                            .qty-count {
+                                background: transparent;
+                                color: inherit;
+                                font-weight: bold;
+                                font-size: inherit;
+                                border: none;
+                                display: inline-block;
+                                min-width: 0;
+                                height: 2.5rem;
+                                line-height: 1;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+    
+                            .product-qty {
+                                width: 50px;
+                                min-width: 0;
+                                display: inline-block;
+                                text-align: center;
+                                appearance: textfield;		
+                                
+                                &::-webkit-outer-spin-button,
+                                &::-webkit-inner-spin-button {
+                                    appearance: none;
+                                    margin: 0;
+                                }
+                            }
+    
+                            .qty-count {
+                                padding: 0;
+                                cursor: pointer;
+                                width: 2.5rem;
+                                font-size: 1.25em;
+                                text-indent: -100px;
+                                overflow: hidden;
+                                position: relative;
+                                
+                                &:before, 
+                                &:after {
+                                    content: "";
+                                    height: 2px;
+                                    width: 10px;
+                                    position: absolute;
+                                    display: block;
+                                    background: $black;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                }
+                                &--minus {
+                                    border-right: 1px solid $bg-color;
+                                }
+                                &--add {
+                                    border-left: 1px solid $bg-color;
+                                    &:after {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                                
+                                &:disabled {
+                                    color: $text-color;
+                                    background: $white;
+                                    cursor: not-allowed;
+                                    border-color: transparent;
+                                    
+                                    &:before,
+                                    &:after {
+                                        background: $text-color;
+                                    }
+                                }
+                            }
+                        }
+                        button{
+                            background-color: $sec-bg;
+                            color: $white;
+                            width: 80%;
+                            padding: 5px 10px;
+                            display: inline-block;
+                            margin-top: 5px;
+                            text-decoration: none;
+                            transition: all .5s;
+                            border: none;
+                            &:hover{
+                                background-color: $main-bg;
+                            }
+                        }
+                    }
+                    .icon {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding: 10px;
+                        opacity: 0;
+                        transition: all .5s;
+                        ul{
+                            li{
+                                display: block;
+                                margin-bottom: 10px;
+                                a{
+                                    color: $black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover .image-area .overly .add-cart{
+                bottom: 0;
+                opacity: 1;
+            }
+            &:hover .image-area .overly .icon {
+                top: 20px;
+                opacity: 1;
+            }
+            .text{
+                position: relative;
+
+                a{
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: $main-bg;
+                    margin: 15px 0;
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+    .tabs {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+    }
+    .tab-control {
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+        font-size: 1.25rem;
+        padding:0 1rem;
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+    .tab-panel {
+        display: none;
+    }
+    #tab-1:checked ~ .tab-content > #tab-panel-1 {
+        display: block;
+    }
+    #tab-2:checked ~ .tab-content > #tab-panel-2 {
+        display: block;
+    }
+    #tab-3:checked ~ .tab-content > #tab-panel-3 {
+        display: block;
+    }
+}
+
+/*  =============================
+        PRODUCT AREA CSS END
+    =============================
+*/
+
+/*  ============================
+        BRAND AREA CSS START
+    ============================
+*/
+
+.brand-area{
+    padding-bottom: 50px;
+    .slick-slide img {
+        width: 100%;
+    }
+    .slide{
+        padding: 15px;
+        border: 1px solid #ddd;
+    }
+    
+    .slick-custom-arrow.slick-custom-arrow-left.slick-arrow {
+        position: absolute;
+        left: 10px;
+        top: 40%;
+        background-color: rgba(255, 102, 51, 0.32);
+        color: #fff;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .slick-custom-arrow.slick-custom-arrow-right.slick-arrow {
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        background-color: rgba(255, 102, 51, 0.32);
+        color: #fff;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .slick-slide {
+        margin: 0 10px;
+      }
+    .cart-gird {
+        position: relative;
+        text-align: center;
+        h5{
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        span{
+            color: $sec-bg;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .overly {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 51, 0.377);
+            border: 1px solid $sec-bg;
+            transition: all .5s;
+            opacity: 0;
+            a{
+                position: absolute;
+                bottom: 0;
+                display: inline-block;
+                left: 0;
+                right: 0;
+                background-color: $white;
+                color:$main-bg;
+                text-decoration: none;
+                padding: 5px;
+                transition: all .5s;
+                &:hover{
+                    background-color: $sec-bg;
+                    color: $white;
+                }
+            }
+        }
+        &:hover .overly{
+            opacity: 1;
+        }
+    }
+    button.cart {
+        background-color: $sec-bg;
+        padding: 5px 15px;
+        color: $white;
+        border: none;
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+        display: inline-block;
+        width: 100%;
+        margin-top: 2px;
+        transition: all .5s;
+        &:hover{
+            background-color: $main-bg;
+        }
+    }
+}
+
+/*  ==========================
+        BRAND AREA CSS END
+    ==========================
+*/
+
+/*  =============================
+        FOOTER AREA CSS START
+    =============================
+*/
+
+footer{
+    position: relative;
+    padding: 50px 0;
+    background-color: $bg-color;
+    .title{
+        margin-bottom: 20px;
+    }
+    ul{
+        li{
+            display: block;
+            a{
+                color: $main-bg;
+                text-decoration: none;
+                line-height: 32px;
+                transition: all .5s;
+                &:hover{
+                    color: $sec-bg;
+                }
+            }
+        }
+        .icon{
+            margin-top: 15px;
+            display: inline-block;
+            a{
+                font-size: 21px;
+                margin-right: 5px;
+                border: 1px solid $main-bg;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                display: inline-block;
+                &:hover{
+                    background-color: $sec-bg;
+                    border-color: $sec-bg;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*  =============================
+        FOOTER AREA CSS END
+    =============================
+*/
+
+/*  ===============================
+        INNER BANNER CSS START
+    ===============================
+*/
+
+.inner-banner {
+    position: relative;   
+    padding-top: 60px;
+    height: 300px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+        content: "";
+        background-color: $main-bg;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: .8;
+    }
+    .text {
+        position: relative;
+        text-align: center;
+        padding: 88px 0;
+        h1{
+            color: $white;
+            margin-bottom: 15px;
+        }
+    }
+    ul{
+        li{
+            color: $white;
+            margin-right: 5px;
+            a{
+                color: $sec-bg;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/*  ===============================
+        INNER BANNER CSS START
+    ===============================
+*/
+
+.page-link {
+    color: #000033;
+}
+
+/*  ============================
+        LOGIN AREA CSS START
+    ============================
+*/
+
+.login-area{
+    .login-from-area {
+        position: relative;
+        max-width: 530px;
+        margin: auto;
+        .title {
+            position: relative;
+            margin-bottom: 30px;
+            .svg-inline--fa {
+                float: left;
+                font-size: 36px;
+                margin-right: 15px;
+                color: $sec-bg;
+            }
+            h2{
+                color: $main-bg;
+            }
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-control:focus {
+            border-color: $sec-bg;
+            outline: 0;
+            box-shadow: none;
+        }
+        .form-control {
+            border-radius: 0;
+        }
+        .contact-btn {
+            position: relative;
+            text-align: center;
+            margin: 30px 0;
+            button.main-btn {
+                padding: 10px 40px;
+                border: none;
+                background-color: $main-bg;
+                color: $white;
+                transition: all .5s;
+                &:hover{
+                    background-color: $sec-bg;
+                }
+            }
+        }
+    }
+}
+
+/*  ==========================
+        LOGIN AREA CSS END
+    ==========================
+*/
+
+/*  =================================
+        SINGLE PRODUCT CSS START
+    =================================
+*/
+
+.single-product{
+    .product-details{
+        position: relative;
+        .star{
+            position: absolute;
+            right: 15px;
+            top: 50px;
+            .svg-inline--fa{
+                color: $sec-bg;
+                font-size: 16px;
+            }
+        }
+    }
+    
+    h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: $main-bg;
+    }
+    h6 {
+        font-weight: 300;
+        margin-bottom: 22px;
+        color: $text-color;
+    }
+    span {
+        margin-bottom: 8px;
+        position: relative;
+        display: inline-flex;
+    }
+
+    button.qty-count {
+        background-color: $main-bg;
+        border: none;
+        padding: 3px 10px;
+        color: #fff;
+    }
+    input.product-qty {
+        border-radius: 0;
+        border: 1px solid #003;
+        margin: 0 -5px;
+        width: 50px;
+        padding: 2px;
+        text-align: center;
+    }
+    .note {
+        position: relative;
+        margin: 30px 0;
+        padding: 10px;
+        text-align: center;
+        border: 2px dashed $sec-bg;
+        color: $sec-bg;
+    }
+    .btn-area{
+        position: relative;
+        .cart_btn{
+            padding: 8px 40px;
+            background-color: $main-bg;
+            color: $white;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 15px;
+            transition: all .5s;
+            &:hover{
+                background-color: $sec-bg;
+            }
+        }
+        .cart_wish{
+            border: 1px solid $sec-bg;
+            padding: 8px 40px;
+            color: $sec-bg;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: transparent;
+        }
+    }
+  
+/** Previous and next buttons */
+.product-thumbnil-active {
+    padding: 0px 40px;
+}
+.owl-nav button.owl-prev {
+    background: $sec-bg;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+}
+
+.owl-nav button.owl-next {
+    background: $sec-bg;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30px;
+}
+  
+  /** Credits at bottom */
+  .credits {
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    opacity: .7;
+  }
+  
+    .credits img {
+      height: 30px;
+      margin-left: 5px;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+  
+    .credits:hover,
+    .credits:focus {
+      opacity: 1;
+    }
+    
+    .tabs {
+        width: 100%;
+        background-color: white;
+        text-align: left;
+        margin-top: 50px;
+    }
+    .tab-control {
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+        font-size: 16px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        background-color: $sec-bg;
+        color: $white;
+        border-right: 1px solid $white;
+    }
+    .tab-content {
+        background-color: $white;
+        border: 1px solid $sec-bg;
+        padding: 30px;
+    }
+    .tab-panel {
+        display: none;
+    }
+    #tab-1:checked ~ .tab-content > #tab-panel-1 {
+        display: block;
+    }
+    #tab-2:checked ~ .tab-content > #tab-panel-2 {
+        display: block;
+    }
+    #tab-3:checked ~ .tab-content > #tab-panel-3 {
+        display: block;
+    }
+    .o-video {
+        width: 100%;
+        height: 0;
+        position: relative;
+        padding-top: 38.25%; /* 9 / 16 * 100 */
+      }
+      .o-video > iframe {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+      }
+
+    .comments-area {
+        position: relative;
+        h3 {
+            font-size: 34px;
+            font-weight: 600;
+            color: $sec-bg;
+            margin-bottom: 25px;
+          }
+        .single-comments {
+            background: #ffffff;
+            margin-bottom: 15px;
+            padding: 15px;
+            img {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 1px solid $sec-bg;
+                border-radius: 50%;
+            }
+            .star{
+                position: absolute;
+                right: 15px;
+                .svg-inline--fa{
+                    color: $sec-bg;
+                    font-size: 16px;
+                }
+            }
+            .text {
+                position: relative;
+                margin-left: 120px;
+                h5 {
+                    color: $main-bg;
+                    font-size: 21px;
+                    span {
+                        font-size: 15px;
+                        color: #656565;
+                        display: block;
+                        margin-top: 6px;
+                    }
+                }
+                p {
+                    margin-bottom: 5px;
+                }
+                button {
+                    border: none;
+                    background: $main-bg;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .leave-comment {
+        position: relative;
+        margin: 30px 0;
+
+        .radios {
+			input {
+					display: none; 
+					&:checked + label {
+							background-color: $white;
+							color: $sec-bg;
+					}
+			}
+			label {
+					cursor: pointer;
+					background-color: $white;
+					text-align: center;
+					transition: all 0.4s ease-out;
+			}
+	}
+        ul{
+            margin-bottom: 20px;
+            li{
+                width: 177px;
+                border: 1px solid $sec-bg;
+                text-align: center;
+                margin-right: -5px;
+                .head {
+                    padding: 5px;
+                    border-bottom: 1px solid $sec-bg;
+                    font-size: 14px;
+                    color: $main-bg;
+                    font-weight: 400;
+                }
+                .text{
+                    padding: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+        textarea {
+            resize: vertical;
+            width: 100%;
+            border: none;
+            background-color: $white;
+            border: 1px solid $sec-bg;
+            padding: 15px;
+        }
+        textarea:focus-visible {
+            outline: 0;
+        }
+        .form-control:focus {
+            border-color: $sec-bg;
+            outline: 0;
+            box-shadow: none;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 12px .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: $white;
+            background-clip: padding-box;
+            border: 1px solid $sec-bg;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            display: block;
+        }
+        label {
+            display: inline-block;
+            color: #051441;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0 10px;
+        }
+        label.check-text {
+            font-size: 15px;
+            font-weight: 400 !important;
+            position: relative;
+            cursor: pointer;
+        }
+        button.main-btn {
+            border: none;
+            background-color: #051441;
+            color: #ffffff;
+            margin-top: 10px;
+            padding: 10px 40px;
+        }
+    }
+      
+}
+
+/*  ==============================
+        SINGLE PRODUCT CSS END
+    ==============================
+*/
+
+/*  =================================
+        RECENT PRODUCT CSS START
+    =================================
+*/
+
+.recent-product{
+    position: relative;
+    padding: 50px 0 20px;
+    .single-product{
+        position: relative;
+        margin-bottom: 30px;
+        .image-area{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .overly{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                overflow: hidden;
+                .add-cart{
+                    position: absolute;
+                    bottom: -59px;
+                    margin-bottom: 10px;
+                    opacity: 0;
+                    transition: all .5s;
+                    width: 100%;
+                    text-align: center;
+                    .qty-input {
+                        color: $black;
+                        background: $white;
+                        margin: 0 50px;
+                        overflow: hidden;
+
+                        .product-qty,
+                        .qty-count {
+                            background: transparent;
+                            color: inherit;
+                            font-weight: bold;
+                            font-size: inherit;
+                            border: none;
+                            display: inline-block;
+                            min-width: 0;
+                            height: 2.5rem;
+                            line-height: 1;
+                            
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        .product-qty {
+                            width: 50px;
+                            min-width: 0;
+                            display: inline-block;
+                            text-align: center;
+                            appearance: textfield;		
+                            
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                appearance: none;
+                                margin: 0;
+                            }
+                        }
+
+                        .qty-count {
+                            padding: 0;
+                            cursor: pointer;
+                            width: 2.5rem;
+                            font-size: 1.25em;
+                            text-indent: -100px;
+                            overflow: hidden;
+                            position: relative;
+                            
+                            &:before, 
+                            &:after {
+                                content: "";
+                                height: 2px;
+                                width: 10px;
+                                position: absolute;
+                                display: block;
+                                background: $black;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                            }
+                            &--minus {
+                                border-right: 1px solid $bg-color;
+                            }
+                            &--add {
+                                border-left: 1px solid $bg-color;
+                                &:after {
+                                    transform: rotate(90deg);
+                                }
+                            }
+                            
+                            &:disabled {
+                                color: $text-color;
+                                background: $white;
+                                cursor: not-allowed;
+                                border-color: transparent;
+                                
+                                &:before,
+                                &:after {
+                                    background: $text-color;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        background-color: $sec-bg;
+                        color: $white;
+                        width: 80%;
+                        border: none;
+                        padding: 5px 10px;
+                        display: inline-block;
+                        margin-top: 5px;
+                        text-decoration: none;
+                        transition: all .5s;
+                        &:hover{
+                            background-color: $main-bg;
+                        }
+                    }
+                }
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 10px;
+                    opacity: 0;
+                    transition: all .5s;
+                    ul{
+                        li{
+                            display: block;
+                            margin-bottom: 10px;
+                            a{
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:hover .image-area .overly .add-cart{
+            bottom: 0;
+            opacity: 1;
+        }
+        &:hover .image-area .overly .icon {
+            top: 20px;
+            opacity: 1;
+        }
+        .text{
+            position: relative;
+            text-align: center;
+            a{
+                font-size: 14px;
+                text-decoration: none;
+                color: $main-bg;
+                margin: 15px 0;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/*  ==============================
+        RECENT PRODUCT CSS END
+    ==============================
+*/
+
+/*  ============================
+        CART AREA CSS START
+    ============================
+*/
+
+.cart-area{
+    position: relative;
+    padding: 50px 0;
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: unset;
+    }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: $white;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .image-wrapper{
+      width: 100px;
+      img{
+          width: 100%;
+      }
+  }
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+    .btn-area {
+        margin-top: 10px;
+        .cart_btn{
+            text-decoration: none;
+            color: $sec-bg;
+            .svg-inline--fa{
+                margin-right: 5px;
+            }
+        }
+        .cart_update{
+            background-color: $sec-bg;
+            border: none;
+            padding: 5px;
+            text-align: center;
+            display: inline-block;
+            color: $white;
+            text-decoration: none;
+            transition: all .5s;
+            &:hover{
+                background-color: $main-bg;
+            }
+        }
+    }
+    .subtotal-area {
+        border: 1px solid #ddd;
+        width: 33.33333%;
+        padding: 20px;
+        margin-left: auto;
+        margin-top: 30px;
+        position: relative;
+        h4{
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            font-weight: 700;
+            color: $main-bg;
+            span{
+                position: absolute;
+                right: 20px;
+            }
+        }
+        h5{
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            font-weight: 600;
+            color: $sec-bg;
+            span{
+                position: absolute;
+                right: 20px;
+            }
+        }
+        p {
+            font-size: 13px;
+            font-style: italic;
+        }
+        a {
+            background-color: $sec-bg;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            padding: 10px;
+            color: $white;
+            text-decoration: none;
+            transition: all .5s;
+            &:hover{
+                background-color: $main-bg;
+            }
+        }
+    }
+}
+
+/*  ==========================
+        CART AREA CSS END
+    ==========================
+*/
+
+.checkout-area{
+    position: relative;
+    .checkout-from{
+        .title{
+            margin-bottom: 40px;
+            h2{
+                font-size: 34px;
+                color: $main-bg;
+                margin: 0;
+            }
+        }
+        label.form-label {
+            color: $main-bg;
+            width: 100%;
+        }
+        .form-control {
+            display: block;
+            border: 1px solid $sec-bg;
+            appearance: none;
+            border-radius: 0;
+            margin-bottom: 10px;
+        }
+        .form-select {
+            border: 1px solid #ff6633;
+            margin-bottom: 10px;
+            border-radius: 0;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: $sec-bg;
+            outline: 0;
+            box-shadow: none;
+        }
+        .form-check-input[type=checkbox] {
+            border-radius: 0 !important;
+            cursor: pointer;
+        }
+        .form-check-input {
+            border: 1px solid $sec-bg !important;
+        }
+        .form-check-input:checked {
+            background-color: $sec-bg;
+            border-color: $sec-bg;
+        }
+        .form-check-input:focus {
+            border-color: $sec-bg;
+            outline: 0;
+            box-shadow: none;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            border-radius: 0;
+            border: 1px solid $sec-bg;
+            padding: 15px;
+        }
+        ul{
+            position: relative;
+            li {
+                padding: 20px 0;
+                border-bottom: 1px solid $sec-bg;
+                width: 100%;
+                color: $main-bg;
+                span {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+        .checkbox-area{
+            position: relative;
+            margin-top: 30px;
+            button {
+                display: inline-block;
+                margin-top: 30px;
+                color: $white;
+                background-color: $sec-bg;
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none;
+                transition: all .5s;
+                border: none;
+                &:hover{
+                    background-color: $main-bg;
+                }
+            }
+        }
+    }
+}
+
+/*  ========================
+        TOTOP CSS START
+    ========================
+*/
+div#toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #adb5bd;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 1;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  
+  div#toTop:hover {
+    background-color: #ffffff;
+    color: #adb5bd;
+    -webkit-box-shadow: 0 10px 10px rgba(5, 20, 65, 0.39);
+            box-shadow: 0 10px 10px rgba(5, 20, 65, 0.39);
+  }
+
+    form.dropdown-item {
+        position: absolute;
+        left: 0px;
+        top: 63%;
+        :hover{
+            color: #fff;
+        }
+    }
+    form.dropdown-item{
+        button{
+            margin-left:-4px;
+            border: none;
+            background: none;
+        }
+    } 
+  
+  /*  =====================
+          END TOTOP CSS
+      =====================
+  */
+
